@@ -1,26 +1,33 @@
 # GeoClima Multi-API
 
-Aplicación web desarrollada con HTML, CSS y JavaScript que integra tres APIs públicas.
+Proyecto con PHP, MySQL, HTML, CSS y JavaScript. Incluye registro, inicio de sesión, cierre de sesión y un panel protegido con tres APIs.
 
-## APIs utilizadas
+## APIs
 
-1. Open-Meteo: obtiene temperatura, humedad, viento y estado del clima.
-2. REST Countries: muestra bandera, capital, moneda y población del país.
-3. Sunrise-Sunset: obtiene la hora del amanecer y del atardecer.
+1. Open-Meteo: clima.
+2. REST Countries: datos del país.
+3. Sunrise-Sunset: amanecer y atardecer.
 
-## Funcionamiento
+## Instalación
 
-El usuario escribe una ciudad. Primero se consulta su ubicación y luego se realizan peticiones asíncronas con Fetch API para obtener y mostrar toda la información.
+1. Copia el proyecto en `C:/xampp/htdocs/deberapi`.
+2. Inicia Apache y MySQL en XAMPP.
+3. Entra a phpMyAdmin e importa `database.sql`.
+4. Abre `http://localhost/deberapi/`.
+5. Registra un usuario e inicia sesión.
 
-## Estructura
+## Archivos
 
-- index.html
-- css/styles.css
-- js/app.js
+- `index.php`: acceso.
+- `registro.php`: registro.
+- `login.php`: valida credenciales.
+- `logout.php`: cierra la sesión.
+- `dashboard.php`: panel y APIs.
+- `conexion.php`: conexión MySQL.
+- `database.sql`: base de datos.
+- `js/app.js`: consumo de APIs.
 
-## Ejecución
-
-Abre index.html en un navegador o publica el repositorio con GitHub Pages.
+Las contraseñas se guardan con `password_hash` y se verifican con `password_verify`.
 
 ## Autor
 
